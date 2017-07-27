@@ -1,7 +1,7 @@
 i = 0;
 
 function play() {
-	document.getElementById("no-log").innerHTML += '<p id="game"># ' + setup[i] + '</p>';
+	document.getElementById("no-log").innerHTML += '<p class="hide" id="game">' + setup[i] + '</p>';
 	i++;
 	
 	if (i === setup.length) {
@@ -13,22 +13,16 @@ function play() {
 
 function startCheck() {
 	if (i > 0) {
-	document.getElementById("startGame").innerHTML = '<button type="button" class="button dragButtons" onclick="play();lifeCheck()"> Continue</button> <button type="button" class="button dragButtons noIntro" onclick="noIntro();lifeCheck()"> Skip Intro</button>';
+	document.getElementById("startGame").innerHTML = '<button type="button" class="button dragButtons" onclick="play();lifeCheck()"> Continue</button> <button type="button" class="button dragButtons noIntro" onclick="skipIntro();lifeCheck()"> Skip Intro</button>';
 	}
 }
 
-function noIntro() {
-	for (m = i; m < setup.length; m++) {
-		play();
-	}
-}
-
-/*function skipIntro() {
-	document.getElementById('no-log').innerHTML += '<p id="game"># ' + setup.join(" ") + '</p>';
+function skipIntro() {
+	document.getElementById('no-log').innerHTML += '<p class="hide" id="game">' + setup.join(" ") + '</p>';
 	document.getElementById('startGame').style.display='none';
 	document.getElementById('table_creatureFight').style.display='block';
 	document.getElementById('buttons').style.display='block';
-};*/
+};
 
 setup = [
 	"You are in your kitchen washing dishes after eating an entire box of mac and cheese.",
