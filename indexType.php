@@ -27,6 +27,10 @@
 							</div>
 							<div class="fight-log" id="fight-log">
 								<div id="no-log"></div>
+								<p>
+									<span class="p2" id="reallog"># </span>
+									<span id="cursor">|</span>
+								</p>
 							</div>
 						</div>
 						
@@ -36,7 +40,7 @@
 							Start</button>
 
 							<button type="button"
-							class="button dragButtons noIntro" onclick="noIntro();lifeCheck()">
+							class="button dragButtons noIntro" onclick="skipIntro();lifeCheck()">
 							Skip Intro</button>
 						</div>
 						
@@ -67,8 +71,9 @@
 		</div>
 		<?php include("../../includes/footer.html"); ?>
 		
-		<script src="scripts/setup.js"></script>
-		<script src="scripts/creatureFight.js"></script>
+		<script src="scripts/setupType.js"></script>
+		<script src="scripts/creatureFightType.js"></script>
+		<script src="scripts/type.js"></script>
 		
 	</body>
 </html>
