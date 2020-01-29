@@ -3,11 +3,10 @@ i = 0;
 function play() {
 	document.getElementById("no-log").innerHTML += '<p id="game"># ' + setup[i] + '</p>';
 	i++;
-	
+
 	if (i === setup.length) {
 		document.getElementById('startGame').style.display = 'none';
-		document.getElementById('table_creatureFight').style.display = 'block';
-		document.getElementById('buttons').style.display = 'block';
+		document.getElementById('inGame').style.display = 'flex';
 	}
 };
 
@@ -23,13 +22,6 @@ function noIntro() {
 	}
 }
 
-/*function skipIntro() {
-	document.getElementById('no-log').innerHTML += '<p id="game"># ' + setup.join(" ") + '</p>';
-	document.getElementById('startGame').style.display='none';
-	document.getElementById('table_creatureFight').style.display='block';
-	document.getElementById('buttons').style.display='block';
-};*/
-
 setup = [
 	"You are in your kitchen washing dishes after eating an entire box of mac and cheese.",
 	"You pull the drain plug and start to watch the cloudy water level drop, but it stops after only a few seconds.",
@@ -43,4 +35,3 @@ setup = [
 	"You stumble back and knock over the milk. It turns towards you, opens up three sharp black fangs and makes a foaming hiss.",
 	"You grab a paring knife from the counter and the lid from the pot to protect yourself. It crouches low, preparing to leap..."
 ];
-
